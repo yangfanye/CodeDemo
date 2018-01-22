@@ -1,0 +1,52 @@
+/*画廊*/
+.gallery {
+	/*margin-bottom: 100rpx;*/
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+/*每张图片所占容器*/
+.item {
+	position: relative;
+	margin: 5px;
+}
+
+/*删除按钮*/
+.delete {
+	position: absolute;
+	height: 20px;
+	bottom: 0;
+	width: 100%;
+	background: #ccc;
+	opacity: .8;
+}
+
+.delete image {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+}
+
+.textarea-container {
+	background: white;
+	padding: 10px;
+}
+
+/*输入框*/
+textarea {
+	background: #fcfcfc;
+	border: 1px solid #e2e2e2;
+	border-radius: 3px;
+	padding: 10px;
+	font-size: 14px;
+	min-height: 120px;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+
+/*提交按钮*/
+.submit {
+	margin: 0 10px;
+}

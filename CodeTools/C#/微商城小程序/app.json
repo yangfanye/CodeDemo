@@ -1,0 +1,51 @@
+{
+    "pages":[
+        "pages/index/index",
+        "pages/member/index/index",
+        "pages/member/evaluate/evaluate",
+        "pages/cart/cart",
+        "pages/member/donate/donate",
+        "pages/member/share/share",
+        "pages/order/list/list",
+        "pages/category/category",
+        "pages/address/add/add",
+        "pages/address/list/list",
+        "pages/goods/list/list",
+        "pages/goods/detail/detail",
+        "pages/order/checkout/checkout",
+        "pages/member/aboutus/aboutus",
+        "pages/admin/login/login",
+        "pages/admin/dashboard/dashboard",
+        "pages/admin/order/order",
+        "pages/order/payment/payment"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#48c23d",
+        "navigationBarTitleText": "灵动云商",
+        "navigationBarTextStyle":"white"
+    },
+    "tabBar":{
+        "selectedColor": "#3cc51f",
+        "list":[{
+                "pagePath":"pages/index/index",
+                "iconPath":"images/icon_home.png",
+                "selectedIconPath":"images/icon_home_selected.png",
+                "text":"首页"
+            },{
+                "pagePath":"pages/category/category",
+                "iconPath":"images/icon_cate.png",
+                "selectedIconPath":"images/icon_cate_selected.png",
+                "text":"分类"
+            },{
+                "pagePath":"pages/cart/cart",
+                "iconPath":"images/icon_cart.png",
+                "selectedIconPath":"images/icon_cart_selected.png",
+                "text":"购物车"
+            },{
+                "pagePath":"pages/member/index/index",
+                "iconPath":"images/icon_member.png",
+                "selectedIconPath":"images/icon_member_selected.png",
+                "text":"我"
+            }]
+    }
+}
