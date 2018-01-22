@@ -1,0 +1,55 @@
+//引用
+<link href="~/Content/ZuUpload/control/css/zyUpload.css" rel="stylesheet" />
+<!-- 样式覆写 -->
+<link rel="stylesheet" type="text/css" href="../../Content/CSS/Mall/main.css?v=@System.Configuration.ConfigurationManager.AppSettings["JSVersion"]">
+<!-- 引用核心层插件 -->
+<script type="text/javascript" src="../../Content/ZuUpload/core/zyFile.js"></script>
+<!-- 引用控制层插件 -->
+<script type="text/javascript" src="../../Content/ZuUpload/control/js/zyUpload.js"></script>
+
+//html-ADD
+<div id="demo" class="demo">
+	<div class="upload-preview-img Carouselimg" style="display: none;"></div>
+	<span class="upload_tips">&nbsp;&nbsp;可上传1张图片，最佳效果图片大小：750*384</span>
+</div>
+
+//html-edit
+ @*设置上传部分的背景*@
+<div id="demo" class="demo">@*起作用的就这一句，id号对就行*@
+	@*预览图片部分，在上传成功后的js里写html*@
+	@if (!string.IsNullOrWhiteSpace(barInfoList[0].BarProductImg))
+	{
+		<div  class="upload-preview-img Carouselimg">
+			<div class="upload-image-list">
+				<input type="hidden" name="BarProductImg" value="0">
+				<img name="UploadImg" src="@barInfoList[0].BarProductImg" data-width="1500px" data-height="1500px">
+				<a href="javascript:void(0);" class="icon-cancel-squared" onclick="DelCoverImg(this);">×</a>
+			</div>
+		</div>
+	}
+	else
+	{
+		<div class="upload-preview-img Carouselimg" style="display: none;"></div>
+	}
+	<span class="upload_tips">&nbsp;&nbsp;可上传1张图片，最佳效果图片比例:1:1</span>
+</div>
+
+//图片上传初始化JS
+<script type="text/javascript">
+	//图片上传初始化JS
+    $(function () {
+        $("#demo").zyUpload({
+            width: "100%",                 // 宽度
+            height: "auto",                 // 宽度
+            itemWidth: "120px",                 // 文件项的宽度
+            itemHeight: "100px",                 // 文件项的高度
+            url: "/ajax/UploadFiles.ashx",  // 上传文件的路径
+            multiple: false,                    // 是否可以多个文件上传
+            dragDrop: true,                    // 是否可以拖动上传文件
+            del: true,                    // 是否可以删除文件
+            finishDel: true,  				  // 是否在上传文件完成后删除预览
+            uploadLimit:1,                           // 限制总的上传张数
+            /* 外部获得的回调接口 */
+        });
+    })
+</script>

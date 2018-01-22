@@ -1,0 +1,20 @@
+	<canvas id="memcanvas" ></canvas>
+	<script>  
+        var canvas = document.getElementById('concanvas'); 
+        $(canvas).attr({width : 140, height : 140}); //定义宽高,务必做.否则有可能控制不住
+        var ctx=canvas.getContext("2d"); //绘制为2D图形
+        var ima = new Image(); //定义一个img对象
+        ima.setAttribute("crossOrigin","anonymous"); //?
+        ima.src = consumer.records[0].publicurl; //把图片的url赋值给img.src
+        var sx = consumer.records[0].facearea.left; //定义截取图片的X
+        var sy = consumer.records[0].facearea.top;  //定义截取图片的y
+        var swidth = consumer.records[0].facearea.width; //截取的宽度
+        var sheight = consumer.records[0].facearea.height; //截取的高度
+        ima.onload = function()  //图片加载完成
+        {
+            ctx.drawImage(ima,sx,sy,swidth,sheight,0,0,140,140); //0:X;0:Y;140:宽;140:140;
+            var base64 = canvas.toDataURL("image/png"); //转成64为加密的编码
+        }  
+    </script>
+	
+	html += '<img alt="" style="width:140px;height:140px;" src="+ base64 + '"/>';

@@ -1,0 +1,37 @@
+/* 行高是字号的倍数*/
+line-height:1.5;
+font-size:20px;
+font-size:125%; /* 假设父级的字号是16px*/
+/*padding,border-radius,box-shadow,text-shadow,等都可以采用em的方式标注,这样可以等比缩放*/
+padding:.3em .8em;
+/*背景叠加*/
+background:#58a linear-gradient(hsal(0,0%,100%,.2),transparent);
+/*颜色变量*/
+background:currentColor
+/*继承*/
+input,select,button{font:inherit;}
+	a{color:inherit;}
+/*transfrom:旋转DIV元素;rotate:2D;45deg:45%*/
+transform:rotate(45deg)
+/*根据内部元素决定宽度*/
+figure{
+	width:min-content;
+	max-width:300px;
+	margin:auto;
+	}
+figure > img{max-width:inherit;}
+
+.column{ 
+    width: 16%; 
+    margin: 2% 2%; 
+    float: left; 
+    background:#03a8d2; 
+    border: 2px solid black; 
+    box-sizing: border-box;/*把borders和padding全都包含在定义的宽高里面*/ 
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+} 
+
+div{clear:both}/*使元素的左右两侧不会出现浮动元素*/
+
+

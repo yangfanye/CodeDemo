@@ -1,0 +1,14 @@
+//日期的插件
+//datefmt:日期格式
+//maxDate:最大的值
+ <li>
+	<div class="li_div" style="width:15%;">活动时间</div>
+	<input type="hidden" id="hidecurrentdate" value="@System.DateTime.Now.ToString("yyyy-MM-dd")" />
+	<div class="li_div" style="width:33%;">
+		<input style="width:100%;" type="text" id="BargainingStartTime" onclick="WdatePicker()" onfocus="WdatePicker({isShowClear:false,readOnly:true,dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'BargainingEndTime\')}'})" class="Wdate time" />
+	</div>
+	<div class="li_div" style="width:5%;text-align:center;">到</div>
+	<div class="li_div" style="width:33%;">
+		<input style="width:100%;" type="text" id="BargainingEndTime" onclick="WdatePicker()" onfocus="WdatePicker({isShowClear:false,readOnly:true,dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'BargainingStartTime\')}'})" class="Wdate time" />
+	</div>
+</li>

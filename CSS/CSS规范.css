@@ -1,0 +1,115 @@
+/* 1.命名规则说明 
+规则命名中，一律采用小写加中划线的方式，不允许使用大写字母或 _ ;*/
+    mian-title{color:#e3c;}
+
+/* 命名避免使用中文拼音，应该采用更简明有语义的英文单词进行组合;
+
+不允许通过1、2、3等序号进行命名 相信也不会有人这样命名;
+
+id用于标识模块或页面的某一个父容器区域，名称必须唯一，不要随意新建id ; */
+.info-title{font-size: 3em}
+
+/* class用于标识某一个类型的对象，命名必须言简意赅;
+
+尽可能提高代码模块的复用，样式尽量用组合的方式样式的复用这里可以写一个公共的样式;
+
+规则名称中不应该包含颜色（red/blue）、定位（left/right）等与具体显示效果相关的信息。应该用意义命名，而不是样式显示结果命名;
+
+有时候可以给选择器添加一个表示状态的前缀，全语义更明了，比如下图是添加了“.is-”前缀。 */
+.is-withdrawal{background-color:#CCC}
+
+/* 2.CSS主要文件命名
+文件类型	命名
+主要的	master.css /style.css
+模块	module.css
+基本公用	base.css
+布局，版面	layout.css
+专栏	columns.css
+文字	font.css
+表单	forms.css
+打印样式	print.css
+主题	themes.css
+补丁	mend.css */
+
+/* 3.常用ID的命名
+页面结构
+结构类型	命名
+页面外围控制整体布局宽度	wrapper
+容器	container
+页头	header
+内容	content/container
+页面主体	main
+页尾	footer
+导航	nav
+侧栏	sidebar
+左中右	_l, _c, _r
+栏目	column
+导航
+导航类型	命名
+导航	nav
+主导航	mainbav
+子导航	subnav
+顶导航	topnav
+边导航	sidebar
+左导航	leftsidebar
+右导航	rightsidebar
+菜单	menu
+子菜单	submenu
+标题	title
+摘要	summary
+功能
+功能类型	命名	功能类型	命名
+标志	logo	当前的	current
+广告	banner	小技巧	tips
+登陆	login	图标	icon
+登录条	loginbar	注释	note
+注册	regsiter	指南	guild
+搜索	search	服务	service
+功能区	shop	热点	hot
+标题	title	新闻	news
+加入	joinus	下载	download
+状态	status	投票	vote
+按钮	btn	合作伙伴	partner
+滚动	scroll	友情链接	link
+标签页	tab	版权	copyright
+文章列表	list	提示信息	msg
+指南	guid	网站地图	sitemap */
+
+/* 3.CSS属性编写顺序
+显示属性：display/list-style/position/float/clear …
+自身属性（盒模型）：width/height/margin/padding/border
+背景：background
+行高：line-height
+文本属性：color/font/text-decoration/text-align/text-indent/vertical-align/white-space/content…
+其他：cursor/z-index/zoom/overflow
+CSS3属性：transform/transition/animation/box-shadow/border-radius
+如果使用CSS3的属性，如果有必要加入浏览器前缀，则按照 -webkit- / -moz- / -ms- / -o- / std的顺序进行添加，标准属性写在最后。
+链接的样式请严格按照如下顺序添加： a:link -> a:visited -> a:hover -> a:active
+4.代码优化
+好的代码必须要做到优化、精简。多余的代码将会给后期的编程带来更多的不便和资源的浪费。 */
+
+/* CSS有些属性是可以缩写的，比如padding,margin,font等等，这样精简代码同时又能提高用户的阅读体验。 */
+    .list-box{border-top:0;font:100%/1.6 serif;padding:0 1em 2em}
+/* 去掉小数点前的“0” */
+    .style{font-size:.8em}
+/* 简写命名
+很多用户都喜欢简写类名，但前提是要让人看懂你的命名才能简写哦！
+
+16进制颜色代码缩写
+有些颜色代码是可以缩写的，我们就尽量缩写吧，提高用户体验为主。 */
+
+
+/* 5.注释规范
+这个一定要和html文件的注释和顺序一致，这样有助于后期代码的查找和改动。 */
+/* Header */
+/* End Header */
+
+
+/* 6.css hack 的使用
+请不用动不动就使用浏览器检测和CSS Hacks，先试试别的解决方法吧！考虑到代码高效率和易管理，虽然这两种方法能快速解决浏览器解析差异，但应被视为最后的手段。在长期的项目中，允许使用hack只会带来更多的hack，你越是使用它，你越是会依赖它！
+
+不得不用的时候推荐使用下面的这些：
+
+IE6	_property:value
+IE6/7	*property:value
+IE6/7/8/9	_property:value\9 */
