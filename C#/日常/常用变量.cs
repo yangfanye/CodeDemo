@@ -58,3 +58,5 @@ return Redirect("/Mobile/tip?action=para");
 
 //判断可空类型是否有值
 HasValue:CustomerBindInfo.CustomerID.HasValue
+//session接口方法
+System.Web.SessionState.IRequiresSessionState
